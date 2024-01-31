@@ -1,0 +1,36 @@
+% Encabezado y pie de pagina
+\pagestyle{fancy}
+\lhead[L]{\includegraphics[width=2.5cm]{logo}}
+\lfoot{\thetitle}
+\rfoot{\thepage}
+\cfoot{}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+% Distancia entre paragrafos
+\setlength{\parskip}{0.5\baselineskip} 
+
+% Portada personalizada
+\makeatletter
+\def\@maketitle{
+	\newpage
+	\null         
+	\thispagestyle{empty}    
+	\begin{center}
+		{\includegraphics[width=0.6\textwidth]{img/logo}\par}
+		\vspace{1cm}
+		{\scshape\Large ENGINEERING FACULTY \par}
+		\vspace{1cm}
+		{\Large MECHATRONIC ENGINEERING \par}
+		{\Large Xrd Grade \par}
+		\vspace{2cm}
+		{\Huge\bfseries\@title \par}
+		\vfill
+		{\bfseries\Large Authors \par}
+		{\Large \@author \par}
+		\vfill
+		{\large \@date}
+	\end{center}
+	\newpage
+	\par}
+\makeatother

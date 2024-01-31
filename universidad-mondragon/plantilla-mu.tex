@@ -1,0 +1,37 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc} % Soporte unicode
+\usepackage[english]{babel} % Idioma
+\usepackage[margin=2.5cm]{geometry} % Margenes
+\usepackage{graphicx} % Insertar imagenes
+\usepackage{fancyhdr} % Encabezado y pie de pagina
+\usepackage{titling} % Titulo personalizado
+\usepackage{amsmath} % Formulas matemáticas
+
+\graphicspath{{img/}} % Carpeta de imagenes
+
+\input{style} % Estilo del documento
+\input{equations} % Lista de ecuaciones
+
+\title{TITLE OF THE DOCUMENT}
+\author{Author}
+
+\begin{document}
+	\maketitle
+	\pagestyle{plain}
+	\setcounter{page}{1}
+	\pagenumbering{Roman}
+	\include{abstract}
+	\tableofcontents
+	\newpage
+	\listoffigures
+	\newpage
+	\listoftables
+	\newpage
+	\listofequations
+	\newpage
+	\pagestyle{fancy}
+	\setcounter{page}{1} 
+	\pagenumbering{arabic}
+	% A partir de aqui comienza lo escrito
+\end{document}

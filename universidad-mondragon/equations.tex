@@ -1,0 +1,16 @@
+\makeatletter
+\def\listofequations{
+	{\bfseries \noindent \Large List of Equations \par}
+	\vspace{0.5cm}
+	\@starttoc{equ}
+}
+\makeatother  
+
+\newcounter{myequation}
+\renewcommand{\themyequation}{\arabic{myequation}}
+
+\newcommand{\eq}[1]{%
+	\refstepcounter{myequation}%
+	\addcontentsline{equ}{subsection}{\protect\numberline{\themyequation}#1}%
+	\ignorespaces
+}
